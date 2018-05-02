@@ -3,6 +3,6 @@
  */
 process.on('message', function(m) {
     console.log('child received infomation from parent : ' ,m);
+    process.send({foo: 'foo'});
 });
 console.log('process >> ', process.pid);
-//process.send({foo: 'foo'});
